@@ -26,9 +26,16 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+           "styles": [
+  "src/styles.css",
+  "https://cdn.jsdelivr.net/npm/@fullcalendar/core/main.min.css",
+  "https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid/main.min.css"
+],
+
+
+
+
+
             "scripts": []
           },
           "configurations": {

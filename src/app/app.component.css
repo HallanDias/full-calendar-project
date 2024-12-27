@@ -1,0 +1,12 @@
+/* app.component.css */
+.event-form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .event-form input {
+    margin-bottom: 10px;
+  }
+  
