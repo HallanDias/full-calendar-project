@@ -1,9 +1,24 @@
-<full-calendar [options]="calendarOptions"></full-calendar>
+<div class="container">
+  <div class="full-calendar-container">
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
 
+  <div class="time-slots" *ngIf="showTimeSlots">
+    <h3>Selecione um horário para {{ selectedDate | date: 'fullDate' }}</h3>
+    <ul>
+      <li *ngFor="let time of timeSlots" (click)="selectTimeSlot(time)">
+        {{ time }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Formulário de evento -->
 <div *ngIf="showEventForm" class="event-form">
-  <form (ngSubmit)="submitEvent()">
-    <label for="time">Hora:</label>
-    <input id="time" type="time" [(ngModel)]="selectedTime" name="time" required />
-    <button type="submit">Salvar Evento</button>
+  <form (ngSubmit)="saveEvent()">
+    <label for="eventTitle">Título do evento:</label>
+    <input type="text" id="eventTitle" [(ngModel)]="eventTitle" name="eventTitle" required />
+    <button type="submit">Salvar</button>
+    <button type="button" (click)="cancelEvent()">Cancelar</button>
   </form>
 </div>

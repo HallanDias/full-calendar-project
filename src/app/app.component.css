@@ -1,12 +1,96 @@
-/* app.component.css */
+/* Estilos gerais para o layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  height: 70vh;  /* Para garantir que a tela ocupe toda a altura */
+}
+
+/* Ajuste do tamanho do calendário e dos horários */
+.full-calendar-container {
+  width: 65%; /* Ajuste para dividir igualmente */
+  margin-right: 20px; /* Espaçamento entre o calendário e a lista de horários */
+}
+
+.full-calendar-container .fc {
+  width: 100%; /* Ajuste a largura do calendário */
+  height: 71vh;  /* Ajuste a altura do calendário */
+  overflow: hidden;
+  margin-bottom: 5px; /* Para dar 5px de espaçamento entre o calendário e a caixa de eventos */
+}
+
+/* Estilos para a seção de slots de tempo */
+.time-slots {
+  width: 35%; /* Ajuste para dividir igualmente */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 86vh;  /* Para alinhar a altura da lista com o calendário */
+  overflow-y: auto;  /* Adiciona rolagem caso a lista de horários seja muito grande */
+}
+
+.time-slots ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.time-slots li {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.time-slots li:hover {
+  background-color: #d0d0d0;
+}
+
+/* Estilos para o formulário de evento */
 .event-form {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-  }
-  
-  .event-form input {
-    margin-bottom: 10px;
-  }
-  
+  margin-top: 5px;  /* Agora a caixa de eventos estará 5px abaixo do calendário */
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;  /* Garante que o formulário ocupe toda a largura disponível */
+}
+
+.event-form input {
+  margin-bottom: 10px;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.event-form button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event-form button:hover {
+  background-color: #45a049;
+}
+
+.event-form button[type="button"] {
+  background-color: #f44336;
+}
+
+.event-form button[type="button"]:hover {
+  background-color: #e53935;
+}
+
+/* Ajuste para centralizar o conteúdo do formulário */
+.event-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
